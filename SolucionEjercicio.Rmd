@@ -42,3 +42,18 @@ help("mammals", package = "MASS")
 help("Animals2", package = "robustbase")
 ```
 
+
+```{r}
+# Conjunto mammals
+dim(mammals)
+head(mammals)
+tail(mammals)
+str(mammals)
+
+# Conjunto Animals2
+dim(Animals2)
+head(Animals2)
+tail(Animals2)
+str(Animals2)
+```
+
