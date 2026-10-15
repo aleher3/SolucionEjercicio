@@ -71,3 +71,15 @@ commonAnimals
 length(commonAnimals)
 ```
 
+```{r}
+# Animales que están en mammals, pero no en Animals2
+setdiff(rownames(mammals), rownames(Animals2))
+
+# Animales que están en Animals2, pero no en mammals
+setdiff(rownames(Animals2), rownames(mammals))
+
+length(setdiff(rownames(mammals), rownames(Animals2)))
+
+length(setdiff(rownames(Animals2), rownames(mammals)))
+```
+
