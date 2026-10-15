@@ -29,7 +29,6 @@ plot(pressure)
 
 Note that the `echo = FALSE` parameter was added to the code chunk to prevent printing of the R code that generated the plot.
 
-
 ```{r}
 install.packages("MASS")
 install.packages("robustbase")
@@ -41,7 +40,6 @@ library(robustbase)
 help("mammals", package = "MASS")
 help("Animals2", package = "robustbase")
 ```
-
 
 ```{r}
 # Conjunto mammals
@@ -56,6 +54,7 @@ head(Animals2)
 tail(Animals2)
 str(Animals2)
 ```
+
 ```{r}
 rownames(mammals)
 colnames(mammals)
@@ -63,6 +62,7 @@ colnames(mammals)
 rownames(Animals2)
 colnames(Animals2)
 ```
+
 ```{r}
 commonAnimals <- intersect(rownames(mammals),
                            rownames(Animals2))
@@ -83,3 +83,13 @@ length(setdiff(rownames(mammals), rownames(Animals2)))
 length(setdiff(rownames(Animals2), rownames(mammals)))
 ```
 
+```{r}
+mammalsOnly <- setdiff(rownames(mammals),
+                       rownames(Animals2))
+
+Animals2Only <- setdiff(rownames(Animals2),
+                        rownames(mammals))
+
+mammalsOnly
+Animals2Only
+```
